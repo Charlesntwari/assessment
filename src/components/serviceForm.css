@@ -1,0 +1,135 @@
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form .half-width {
+    grid-column: span 1;
+}
+
+form .full-width {
+    grid-column: span 2;
+}
+
+form .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+form .increment-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+form .increment-container input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+    margin-right: 10px;
+}
+
+form .increment-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+form .increment-container button:hover {
+    background-color: #45a049;
+}
+
+form .date-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+form .date-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+form .date-container button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+form .date-container button:hover {
+    background-color: #f2f2f2;
+}
+
+form .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+form .header h2 {
+    margin: 0;
+}
+
+form .header button {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form .header button:hover {
+    background-color: #f2f2f2;
+}
+
+form .header a {
+    color: #4CAF50;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+form .header a:hover {
+    text-decoration: underline;
+}
