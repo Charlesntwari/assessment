@@ -1,39 +1,48 @@
+/* Styling for the form */
 form {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted grid template columns to be responsive */
     grid-gap: 20px; /* Increased grid-gap for space between fields */
-    background-color: #fff;
+    background-color: #f8f9fa; /* Changed background color */
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Increased border-radius for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly increased box-shadow for depth */
 }
 
+/* Styling for labels */
 form label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Reduced margin bottom for tighter spacing */
     font-weight: bold;
+    color: #333; /* Darkened label color for better readability */
 }
 
+/* Styling for input fields */
 form input[type="text"],
 form input[type="number"],
 form input[type="date"],
 form textarea,
 form select {
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px; /* Increased padding for better touch target */
+    border-radius: 8px; /* Increased border-radius for consistency */
     border: 1px solid #ccc;
     box-sizing: border-box;
+    font-size: 16px; /* Increased font-size for better visibility */
+    color: #333; /* Darkened text color for better readability */
 }
 
+/* Styling for half-width fields */
 form .half-width {
     grid-column: span 1;
 }
 
+/* Styling for full-width fields */
 form .full-width {
     grid-column: span 2;
 }
 
+/* Styling for button container */
 form .button-container {
     grid-column: span 2;
     display: flex;
@@ -41,29 +50,29 @@ form .button-container {
     margin-top: 20px;
 }
 
-form .unity-measurement-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-}
-
+/* Styling for unity measurement container */
+form .unity-measurement-container,
 form .tin-registration-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
 }
 
+/* Styling for submit button */
 form button[type="submit"] {
-    grid-column: span 2; /* Spanning two columns */
-    justify-self: end; /* Aligning to the end of the grid */
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+    grid-column: span 2;
+    justify-self: end;
+    background-color: #007bff; /* Changed button color */
+    color: #fff;
+    padding: 12px 24px; /* Increased padding for better touch target */
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Increased border-radius for consistency */
     cursor: pointer;
+    font-size: 16px; /* Increased font-size for better visibility */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
+/* Styling for submit button hover */
 form button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #0056b3; /* Darkened button color on hover */
 }

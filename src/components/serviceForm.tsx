@@ -1,3 +1,4 @@
+// Import statements...
 import React, { useState } from 'react';
 import './serviceForm.css';
 
@@ -107,6 +108,7 @@ const ServiceForm = () => {
                     id="citizenship"
                     value={citizenship}
                     onChange={(e) => setCitizenship(e.target.value)}
+                    required // Adding required attribute
                 >
                     <option value="">Select citizenship</option>
                     <option value="Rwandan">Rwandan</option>
@@ -120,6 +122,7 @@ const ServiceForm = () => {
                             placeholder="Enter Identification document number"
                             value={identificationNumber}
                             onChange={(e) => setIdentificationNumber(e.target.value)}
+                            required // Adding required attribute
                         />
                         {/* Add validation for identificationNumber if needed */}
                         <input
@@ -127,6 +130,7 @@ const ServiceForm = () => {
                             placeholder="Other names"
                             value={otherNames}
                             onChange={(e) => setOtherNames(e.target.value)}
+                            required // Adding required attribute
                         />
                         {/* Add validation for otherNames if needed */}
                         <input
@@ -134,6 +138,7 @@ const ServiceForm = () => {
                             placeholder="Surname"
                             value={surname}
                             onChange={(e) => setSurname(e.target.value)}
+                            required // Adding required attribute
                         />
                         {/* Add validation for surname if needed */}
                         <input
@@ -141,6 +146,7 @@ const ServiceForm = () => {
                             placeholder="Nationality"
                             value={nationality}
                             onChange={(e) => setNationality(e.target.value)}
+                            required // Adding required attribute
                         />
                         {/* Add validation for nationality if needed */}
                     </>
@@ -151,6 +157,7 @@ const ServiceForm = () => {
                         placeholder="Passport number"
                         value={passportNumber}
                         onChange={(e) => setPassportNumber(e.target.value)}
+                        required // Adding required attribute
                     />
                     // Add validation for passportNumber if needed
                 )}
@@ -163,6 +170,7 @@ const ServiceForm = () => {
                     id="business-type"
                     value={businessType}
                     onChange={(e) => setBusinessType(e.target.value)}
+                    required // Adding required attribute
                 >
                     <option value="">Enter BusinessType</option>
                     <option value="Retailer">Retailer</option>
@@ -175,6 +183,7 @@ const ServiceForm = () => {
                     placeholder="Company name"
                     value={companyName}
                     onChange={(e) => setCompanyName(e.target.value)}
+                    required // Adding required attribute
                 />
                 {/* Add validation for companyName if needed */}
                 <div className="tin-registration-container">
@@ -183,12 +192,14 @@ const ServiceForm = () => {
                         placeholder="TIN number"
                         value={tinNumber}
                         onChange={(e) => setTinNumber(e.target.value)}
+                        required // Adding required attribute
                     />
                     {/* Add validation for tinNumber if needed */}
                     <input
                         type="date"
                         value={registrationDate}
                         onChange={(e) => setRegistrationDate(e.target.value)}
+                        required // Adding required attribute
                     />
                     {/* Add validation for registrationDate if needed */}
                 </div>
@@ -197,6 +208,7 @@ const ServiceForm = () => {
                     placeholder="District"
                     value={businessDistrict}
                     onChange={(e) => setBusinessDistrict(e.target.value)}
+                    required // Adding required attribute
                 />
                 {/* Add validation for businessDistrict if needed */}
             </div>
@@ -208,6 +220,7 @@ const ServiceForm = () => {
                     id="purpose-of-importation"
                     value={purposeOfImportation}
                     onChange={(e) => setPurposeOfImportation(e.target.value)}
+                    required // Adding required attribute
                 >
                     <option value="">Select the purpose of importation</option>
                     <option value="Direct sale">Direct sale</option>
@@ -222,6 +235,7 @@ const ServiceForm = () => {
                         placeholder="Specify purpose of importation"
                         value={specifyPurpose}
                         onChange={(e) => setSpecifyPurpose(e.target.value)}
+                        required // Adding required attribute
                     />
                     // Add validation for specifyPurpose if needed
                 )}
@@ -230,6 +244,7 @@ const ServiceForm = () => {
                     id="product-category"
                     value={productCategory}
                     onChange={(e) => setProductCategory(e.target.value)}
+                    required // Adding required attribute
                 >
                     <option value="">Select product category</option>
                     <option value="General purpose">General purpose</option>
@@ -242,6 +257,7 @@ const ServiceForm = () => {
                     placeholder="Product name"
                     value={productName}
                     onChange={(e) => setProductName(e.target.value)}
+                    required // Adding required attribute
                 />
                 {/* Add validation for productName if needed */}
                 <div className="unity-measurement-container">
@@ -249,6 +265,7 @@ const ServiceForm = () => {
                         id="unit-of-measurement"
                         value={unitOfMeasurement}
                         onChange={(e) => setUnitOfMeasurement(e.target.value)}
+                        required // Adding required attribute
                     >
                         <option value="">Enter unit of measurement</option>
                         <option value="Kgs">Kgs</option>
@@ -260,6 +277,7 @@ const ServiceForm = () => {
                         placeholder="Quantity of product(s)"
                         value={quantity}
                         onChange={(e) => setQuantity(e.target.value)}
+                        required // Adding required attribute
                     />
                     {/* Add validation for quantity if needed */}
                 </div>
@@ -267,6 +285,7 @@ const ServiceForm = () => {
                     placeholder="Description of products"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
+                    required // Adding required attribute
                 />
                 {/* Add validation for description if needed */}
             </div>
