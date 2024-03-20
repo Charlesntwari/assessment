@@ -38,8 +38,6 @@ const ServiceForm = () => {
             isValid = false;
         }
 
-        // Add more validations for other fields as needed...
-
         setErrors(errors);
         return isValid;
     };
@@ -103,14 +101,13 @@ const ServiceForm = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            {/* Business Owner Details */}
             <div>
                 <label htmlFor="citizenship">Applicant citizenship:</label>
                 <select
                     id="citizenship"
                     value={citizenship}
                     onChange={(e) => setCitizenship(e.target.value)}
-                    required // Adding required attribute
+                    required
                 >
                     <option value="">Select citizenship</option>
                     <option value="Rwandan">Rwandan</option>
@@ -124,25 +121,22 @@ const ServiceForm = () => {
                             placeholder="Enter Identification document number"
                             value={identificationNumber}
                             onChange={(e) => setIdentificationNumber(e.target.value)}
-                            required // Adding required attribute
-                        />
-                        {/* Add validation for identificationNumber if needed */}                       
+                            required
+                        />                     
                         <input
                             type="text"
                             placeholder="Surname"
                             value={surname}
                             onChange={(e) => setSurname(e.target.value)}
-                            required // Adding required attribute
+                            required
                         />
-                        {/* Add validation for surname if needed */}
                         <input
                             type="text"
                             placeholder="Other names"
                             value={otherNames}
                             onChange={(e) => setOtherNames(e.target.value)}
-                            required // Adding required attribute
+                            required
                         />
-                        {/* Add validation for otherNames if needed */}
                     </>
                 )}
                 {citizenship === 'Foreigner' && (
@@ -152,17 +146,15 @@ const ServiceForm = () => {
                             placeholder="Passport number"
                             value={passportNumber}
                             onChange={(e) => setPassportNumber(e.target.value)}
-                            required // Adding required attribute
+                            required
                         />
-                        {/* Add validation for passportNumber if needed */}
                         <input
                             type="text"
                             placeholder="Nationality"
                             value={nationality}
                             onChange={(e) => setNationality(e.target.value)}
-                            required // Adding required attribute
+                            required
                         />
-                        {/* Add validation for nationality if needed */}
                     </div>
                 )}
                 <input
@@ -170,7 +162,7 @@ const ServiceForm = () => {
                     placeholder="e-mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    required // Adding required attribute
+                    required
                 />
             </div>
 
@@ -181,47 +173,42 @@ const ServiceForm = () => {
                     id="business-type"
                     value={businessType}
                     onChange={(e) => setBusinessType(e.target.value)}
-                    required // Adding required attribute
+                    required
                 >
                     <option value="">Enter BusinessType</option>
                     <option value="Retailer">Retailer</option>
                     <option value="Wholesale">Wholesale</option>
                     <option value="Manufacturer">Manufacturer</option>
                 </select>
-                {/* Add validation for businessType if needed */}
                 <input
                     type="text"
                     placeholder="Company name"
                     value={companyName}
                     onChange={(e) => setCompanyName(e.target.value)}
-                    required // Adding required attribute
+                    required 
                 />
-                {/* Add validation for companyName if needed */}
                 <div className="tin-registration-container">
                     <input
                         type="text"
                         placeholder="TIN number"
                         value={tinNumber}
                         onChange={(e) => setTinNumber(e.target.value)}
-                        required // Adding required attribute
+                        required
                     />
-                    {/* Add validation for tinNumber if needed */}
                     <input
                         type="date"
                         value={registrationDate}
                         onChange={(e) => setRegistrationDate(e.target.value)}
-                        required // Adding required attribute
+                        required
                     />
-                    {/* Add validation for registrationDate if needed */}
                 </div>
                 <input
                     type="text"
                     placeholder="District"
                     value={businessDistrict}
                     onChange={(e) => setBusinessDistrict(e.target.value)}
-                    required // Adding required attribute
+                    required
                 />
-                {/* Add validation for businessDistrict if needed */}
             </div>
 
             {/* Product Information */}
@@ -239,66 +226,59 @@ const ServiceForm = () => {
                     <option value="Trial use">Trial use</option>
                     <option value="Other">Other</option>
                 </select>
-                {/* Add validation for purposeOfImportation if needed */}
                 {purposeOfImportation === 'Other' && (
                     <input
                         type="text"
                         placeholder="Specify purpose of importation"
                         value={specifyPurpose}
                         onChange={(e) => setSpecifyPurpose(e.target.value)}
-                        required // Adding required attribute
+                        required
                     />
-                    // Add validation for specifyPurpose if needed
                 )}
                 <label htmlFor="product-category">Product category:</label>
                 <select
                     id="product-category"
                     value={productCategory}
                     onChange={(e) => setProductCategory(e.target.value)}
-                    required // Adding required attribute
+                    required
                 >
                     <option value="">Select product category</option>
                     <option value="General purpose">General purpose</option>
                     <option value="Construction materials">Construction materials</option>
                     <option value="Chemicals">Chemicals</option>
                 </select>
-                {/* Add validation for productCategory if needed */}
                 <input
                     type="text"
                     placeholder="Product name"
                     value={productName}
                     onChange={(e) => setProductName(e.target.value)}
-                    required // Adding required attribute
+                    required 
                 />
-                {/* Add validation for productName if needed */}
                 <div className="unity-measurement-container">
                     <select
                         id="unit-of-measurement"
                         value={unitOfMeasurement}
                         onChange={(e) => setUnitOfMeasurement(e.target.value)}
-                        required // Adding required attribute
+                        required
                     >
                         <option value="">Enter unit of measurement</option>
                         <option value="Kgs">Kgs</option>
                         <option value="Tonnes">Tonnes</option>
                     </select>
-                    {/* Add validation for unitOfMeasurement if needed */}
                     <input
                         type="number"
                         placeholder="Quantity of product(s)"
                         value={quantity}
                         onChange={(e) => setQuantity(e.target.value)}
-                        required // Adding required attribute
+                        required
                     />
-                    {/* Add validation for quantity if needed */}
                 </div>
                 <textarea
                     placeholder="Description of products"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    required // Adding required attribute
+                    required
                 />
-                {/* Add validation for description if needed */}
             </div>
 
             <div className="button-container">
