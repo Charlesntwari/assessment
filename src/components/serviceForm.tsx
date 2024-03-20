@@ -1,4 +1,3 @@
-// Import statements...
 import React, { useState } from 'react';
 import './serviceForm.css';
 
@@ -13,6 +12,7 @@ const ServiceForm = () => {
     const [surname, setSurname] = useState('');
     const [nationality, setNationality] = useState('');
     const [passportNumber, setPassportNumber] = useState('');
+    const [email, setEmail] = useState('');
     const [businessType, setBusinessType] = useState('');
     const [companyName, setCompanyName] = useState('');
     const [tinNumber, setTinNumber] = useState('');
@@ -55,6 +55,7 @@ const ServiceForm = () => {
                 surname,
                 nationality,
                 passportNumber,
+                email,
                 businessType,
                 companyName,
                 tinNumber,
@@ -83,6 +84,7 @@ const ServiceForm = () => {
         setSurname('');
         setNationality('');
         setPassportNumber('');
+        setEmail('');
         setBusinessType('');
         setCompanyName('');
         setTinNumber('');
@@ -124,15 +126,7 @@ const ServiceForm = () => {
                             onChange={(e) => setIdentificationNumber(e.target.value)}
                             required // Adding required attribute
                         />
-                        {/* Add validation for identificationNumber if needed */}
-                        <input
-                            type="text"
-                            placeholder="Other names"
-                            value={otherNames}
-                            onChange={(e) => setOtherNames(e.target.value)}
-                            required // Adding required attribute
-                        />
-                        {/* Add validation for otherNames if needed */}
+                        {/* Add validation for identificationNumber if needed */}                       
                         <input
                             type="text"
                             placeholder="Surname"
@@ -143,24 +137,41 @@ const ServiceForm = () => {
                         {/* Add validation for surname if needed */}
                         <input
                             type="text"
+                            placeholder="Other names"
+                            value={otherNames}
+                            onChange={(e) => setOtherNames(e.target.value)}
+                            required // Adding required attribute
+                        />
+                        {/* Add validation for otherNames if needed */}
+                    </>
+                )}
+                {citizenship === 'Foreigner' && (
+                    <div>
+                        <input
+                            type="text"
+                            placeholder="Passport number"
+                            value={passportNumber}
+                            onChange={(e) => setPassportNumber(e.target.value)}
+                            required // Adding required attribute
+                        />
+                        {/* Add validation for passportNumber if needed */}
+                        <input
+                            type="text"
                             placeholder="Nationality"
                             value={nationality}
                             onChange={(e) => setNationality(e.target.value)}
                             required // Adding required attribute
                         />
                         {/* Add validation for nationality if needed */}
-                    </>
+                    </div>
                 )}
-                {citizenship === 'Foreigner' && (
-                    <input
-                        type="text"
-                        placeholder="Passport number"
-                        value={passportNumber}
-                        onChange={(e) => setPassportNumber(e.target.value)}
-                        required // Adding required attribute
-                    />
-                    // Add validation for passportNumber if needed
-                )}
+                <input
+                    type="text"
+                    placeholder="e-mail"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required // Adding required attribute
+                />
             </div>
 
             {/* Business Details */}
