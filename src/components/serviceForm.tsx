@@ -68,7 +68,7 @@ const ServiceForm = () => {
                 unitOfMeasurement,
                 quantity,
             });
-            // Clear form after successful submission
+            
             clearForm();
         } else {
             console.error('Form validation failed');
@@ -118,7 +118,7 @@ const ServiceForm = () => {
                     <>
                         <input
                             type="text"
-                            placeholder="Enter Identification document number"
+                            placeholder="Enter Identification number"
                             value={identificationNumber}
                             onChange={(e) => setIdentificationNumber(e.target.value)}
                             required
